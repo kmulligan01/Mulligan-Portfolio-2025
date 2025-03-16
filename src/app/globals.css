@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --black: #171717;
+  --primary: #011224;
+  --secondary: #051C40;
+  --secondary-opacity: rgba(5, 28, 64, 0.8);
+  --super-light-blue: #93BCF0;
+  --blue: #0E528B;
+  --cyan-blue: #1E8EF2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +20,91 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.prose {
+  max-width: 100vw;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+  background: var(--primary);
+  font-family: var(--font-roboto);
+}
+
+h1,
+h2 {
+  font-family: var(--font-bebas-neue);
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: var(--font-roboto);
+}
+
+.tw-container {
+  @apply xl:max-w-screen-xl lg:max-w-screen-lg xl:my-[130px];
+}
+
+.btn-primary {
+  @apply rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-cyan-blue text-white gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 no-underline;
+}
+
+.btn-outline {
+  @apply rounded-full border border-solid border-super-light-blue no-underline dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44;
+}
+
+.btn-link {
+  @apply flex items-center gap-2 hover:underline hover:underline-offset-4 no-underline transition-colors;
+}
+
+main {
+  @apply ml-40 mt-0;
+}
+
+.linkSect a {
+  color: var(--super-light-blue);
+  font-family: var(--font-bebas-neue);
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 50px;
+  background: var(--cyan-blue);
+  height: 56px;
+  width: 100%;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Only apply hover effects to the specific <a> inside the hovered <li> */
+.linkSect div:hover>a {
+  background: var(--super-cyan-blue);
+  color: #fff;
+}
+
+/* Hide span initially */
+.linkSect a span {
+  padding: 0 5px 0 7px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show span only for the hovered <a> */
+.linkSect div:hover>a span {
+  display: inline-block;
+  opacity: 1;
 }
