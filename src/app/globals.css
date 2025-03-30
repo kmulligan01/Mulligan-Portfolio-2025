@@ -11,8 +11,6 @@
   --super-light-blue: #93BCF0;
   --blue: #0E528B;
   --cyan-blue: #1E8EF2;
-  --font-bebas-neue: "Bebas Neue", cursive;
-  --font-roboto: "Roboto", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
