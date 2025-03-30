@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Roboto, Noto_Sans_Georgian } from "next/font/google";
+import { Bebas_Neue, Roboto } from "next/font/google";
 import "./globals.css";
 
 const headingSans = Bebas_Neue({
   variable: "--font-bebas-neue",
-  weight: '400'
+  weight: '400',
+  subsets: ["latin"],
 });
 
 const copySans = Roboto({
   variable: "--font-roboto",
-  weight: ['300', '400', '500', '700', '900']
+  weight: '400',
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {

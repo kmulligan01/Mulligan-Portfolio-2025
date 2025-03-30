@@ -10,7 +10,7 @@ export default {
     extend: {
       gridTemplateColumns: {
 
-        'custom-grid': 'repeat(auto-fit, minmax(0, 125px))',
+        'custom-grid': 'repeat(auto-fit, minmax(0, 150px))',
 
       },
       colors: {

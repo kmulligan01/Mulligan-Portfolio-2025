@@ -1,30 +1,11 @@
 'use client'
 import Image from 'next/image';
 import heroImg from '../../public/hero.jpg';
-import { Github, Linkedin, Globe } from 'lucide-react';
+import social from '@/utils/socials';
 import { Typewriter } from 'react-simple-typewriter'
 
 export default function Hero() {
-    const social = [
-        {
-            "id": 1,
-            "icon": Github,
-            "label": "Github",
-            "link": "https://github.com/kendramulligan"
-        },
-        {
-            "id": 2,
-            "icon": Linkedin,
-            "label": "Linkedin",
-            "link": "https://www.linkedin.com/in/kendramulligan/"
-        },
-        {
-            "id": 3,
-            "icon": Globe,
-            "label": "Website",
-            "link": "https://kendramulligan.dev"
-        },
-    ]
+
     return (
         <section className="relative w-full h-screen " id="home">
             {/* Image */}
@@ -42,14 +23,14 @@ export default function Hero() {
             <div className="absolute top-0 left-0 right-0 bottom-0 z-10 bg-secondary-opacity -ml-40 "></div>
 
             {/* Content */}
-            <div className="absolute z-20 top-0 left-0 right-0 bottom-0 flex items-start justify-center text-left flex-col ml-40">
-                <h1 className="text-white font-semibold">Kendra Mulligan</h1>
+            <div className="absolute z-20 lg:top-0 top-10 left-0 right-0 bottom-0 flex items-start justify-center text-left flex-col lg:ml-40 ml-4 lg:flex-nowrap flex-wrap">
+                <h1 className="text-white font-semibold text-[4em] lg:text-[6em] md:text-[5em]">Kendra Mulligan</h1>
                 <h3 className="mt-4">
                     <Typewriter
-                        words={['Developer', 'Freelancer', 'Coder', 'Designer', 'Mentor', 'Tech Enthusiast']}
+                        words={['Developer', 'Freelancer', 'Coder', 'Designer', 'Mentor', 'Innovator']}
                         cursor
                         cursorStyle='_'
-                        typeSpeed={150}
+                        typeSpeed={90}
                         deleteSpeed={100}
                         delaySpeed={1000}
                         loop={false}

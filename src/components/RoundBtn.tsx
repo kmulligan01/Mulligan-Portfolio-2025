@@ -1,18 +1,22 @@
-import { LucideIcon } from "lucide-react";
+import { IconType } from "react-icons";
 
 interface ButtonProps {
-    icon: LucideIcon;
+    icon: IconType;
     label: string;
     link: string;
 }
 
 export default function RoundBtn({ icon: Icon, label, link }: ButtonProps) {
     return (
-        <div className="rounded-full">
-            <a href={link} className="flex items-center space-x-2 p-4 transition-all">
-                <Icon className="size-6 text-super-light-blue" />
-                <span className="">{label}</span>
+
+        <li className="list-none pl-0 linkSect">
+            <a href={link} className="pr-4">
+                <div className="navIcon size-[56px] flex items-center justify-center rounded-full">
+                    <Icon className="size-6 text-super-light-blue " />
+                </div>
+                <span className="p-0">{label}</span>
             </a>
-        </div>
+        </li>
+
     );
 };

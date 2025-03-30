@@ -11,6 +11,8 @@
   --super-light-blue: #93BCF0;
   --blue: #0E528B;
   --cyan-blue: #1E8EF2;
+  --font-bebas-neue: "Bebas Neue", cursive;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,8 +56,12 @@ a {
   font-family: var(--font-roboto);
 }
 
+.prose a {
+  @apply bg-inherit;
+}
+
 .tw-container {
-  @apply xl:max-w-screen-xl lg:max-w-screen-lg xl:my-[130px];
+  @apply xl:max-w-screen-xl lg:max-w-screen-lg xl:my-[130px] w-full my-10;
 }
 
 .btn-primary {
@@ -71,40 +77,63 @@ a {
 }
 
 main {
-  @apply ml-40 mt-0;
+  @apply xl:ml-40 mt-0 ml-4 mr-4 md:ml-10 lg:ml-28;
 }
 
-.linkSect a {
-  color: var(--super-light-blue);
-  font-family: var(--font-bebas-neue);
-  display: flex;
-  align-items: center;
-  padding: 10px 18px;
-  font-size: 15px;
-  border-radius: 50px;
-  background: var(--cyan-blue);
-  height: 56px;
-  width: 100%;
-  overflow: hidden;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+.linkSect {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: var(--super-light-blue);
+    font-family: var(--font-bebas-neue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+
+
+
+    .navIcon {
+      background: var(--cyan-blue);
+    }
+
+    span {
+      padding: 0 5px 0 7px;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background: var(--cyan-blue);
+
+      span {
+        display: inline-block;
+        opacity: 1;
+      }
+    }
+  }
 }
 
-/* Only apply hover effects to the specific <a> inside the hovered <li> */
-.linkSect div:hover>a {
-  background: var(--super-cyan-blue);
-  color: #fff;
-}
+.mobileNav {
 
-/* Hide span initially */
-.linkSect a span {
-  padding: 0 5px 0 7px;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
+  ul {
+    @apply p-0;
+  }
 
-/* Show span only for the hovered <a> */
-.linkSect div:hover>a span {
-  display: inline-block;
-  opacity: 1;
+  li {
+    @apply list-none pl-0;
+
+    a {
+      @apply no-underline
+    }
+  }
 }

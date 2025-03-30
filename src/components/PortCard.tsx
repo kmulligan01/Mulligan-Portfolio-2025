@@ -18,10 +18,10 @@ export default function PostCard({ imageSrc, title, category, url, badge }: Card
             <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 1.05 }}
-                className="bg-transparent  rounded-lg overflow-hidden w-1/3 relative shadow-custom-blue"
+                className="bg-transparent  rounded-lg overflow-hidden lg:w-1/3 md:w-1/2 relative shadow-custom-blue w-full"
 
             >
-                <div className="w-full h-52 overflow-hidden p-8 mb-4">
+                <div className="w-full lg:h-52 h-40 overflow-hidden p-8 lg:mb-4 mb-2">
                     <img
                         src={imageSrc}
                         alt={title}
@@ -29,8 +29,8 @@ export default function PostCard({ imageSrc, title, category, url, badge }: Card
                     />
                 </div>
                 <div className="px-8 pb-8">
-                    <div className="absolute right-10 bg-super-light-blue px-4 py-2 top-10 rounded-lg shadow-md">
-                        <p className="text-xs font-bold text-secondary">{badge}</p>
+                    <div className="absolute right-10 bg-cyan-blue px-4 py-2 top-10 rounded-lg shadow-md">
+                        <p className="text-xs font-bold text-white">{badge}</p>
                     </div>
                     <p className="text-sm font-bold text-white">{category}</p>
                     <h4 className=" font-bold">{title}</h4>
