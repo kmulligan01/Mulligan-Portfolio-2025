@@ -3,6 +3,8 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { IconType } from "react-icons";
 import { SiNextdotjs } from "react-icons/si";
+import { GrGraphQl } from "react-icons/gr";
+
 
 
 type Skill = {
@@ -39,9 +41,9 @@ const skills: Skill[] = [
     },
     {
         id: 5,
-        name: "Nextjs",
-        percentage: "70%",
-        icon: RiNextjsLine,
+        name: "GraphQL",
+        percentage: "80%",
+        icon: GrGraphQl,
     },
     {
         id: 6,
