@@ -15,7 +15,7 @@ const copySans = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "KM Portfolio 2025",
+  title: "Portfolio",
   description: "Kendra Mulligan Portfolio 2025",
 };
 

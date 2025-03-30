@@ -2,6 +2,7 @@ import { FaFigma, FaReact, FaGithub, FaWordpressSimple, FaPhp } from "react-icon
 import { TbBrandTypescript } from "react-icons/tb";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { IconType } from "react-icons";
+import { SiNextdotjs } from "react-icons/si";
 
 
 type Skill = {
@@ -14,9 +15,9 @@ type Skill = {
 const skills: Skill[] = [
     {
         id: 1,
-        name: "Figma",
+        name: "NextJs",
         percentage: "90%",
-        icon: FaFigma,
+        icon: SiNextdotjs,
     },
     {
         id: 2,

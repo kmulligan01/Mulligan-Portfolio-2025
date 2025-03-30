@@ -40,12 +40,6 @@ const navItems: Items[] =
             "icon": Images,
             "label": "Portfolio",
             "link": "#portfolio"
-        },
-        {
-            "id": 6,
-            "icon": Mail,
-            "label": "Contact",
-            "link": "#contact"
         }
     ];
 

@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import jobData from "@/utils/jobInfo";
 import type { Variants } from "motion/react";
-
 import * as motion from "motion/react-client"
+import { EmbedPDF } from '@simplepdf/react-embed-pdf';
 
 export default function Experience() {
     const [scrollDir, setScrollDir] = useState("down");
@@ -35,23 +35,17 @@ export default function Experience() {
         },
     };
 
-    const handleOpenPdf = () => {
-        // Replace with your actual PDF path
-        const pdfUrl = '/MulliganResume.pdf';  // The path to your PDF file
 
-        // Open the PDF in a new tab
-        window.open(pdfUrl, '_blank');
-    };
 
     return (
         <div className="tw-container space-y-8" id="experience">
             <div className="flex justify-between items-center lg:flex-nowrap flex-wrap">
                 <h2 className='lg:text-left text-center'>Experience</h2>
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 1.05 }} className="border border-cyan-blue py-3 px-5 rounded-lg shadow-custom-blue" onClick={handleOpenPdf} >
-                    Download Resume
-                </motion.button>
+                <EmbedPDF companyIdentifier="react-viewer" >
+                    <motion.a href="/Mulligan-Resume.pdf" whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 1.05 }}
+                        className="border border-cyan-blue py-3 px-5 rounded-lg shadow-custom-blue no-underline text-white">Download Resume</motion.a>
+                </EmbedPDF>
             </div>
             {jobData.map((job) => (
                 <motion.div

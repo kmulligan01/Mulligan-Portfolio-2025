@@ -1,10 +1,9 @@
+'use client'
 import { useState } from "react";
 import navItems from "@/utils/navitems";
 import RoundBtn from './RoundBtn';
 import { Menu, X } from 'lucide-react';
 import social from '@/utils/socials';
-
-
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
