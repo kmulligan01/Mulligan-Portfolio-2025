@@ -14,13 +14,13 @@ const social: SocialItems[] = [
         "id": 1,
         "icon": Github,
         "label": "Github",
-        "link": "https://github.com/kendramulligan"
+        "link": "https://github.com/kmulligan01"
     },
     {
         "id": 2,
         "icon": Linkedin,
         "label": "Linkedin",
-        "link": "https://www.linkedin.com/in/kendramulligan/"
+        "link": "https://www.linkedin.com/in/kmulligan589/"
     },
     {
         "id": 4,
